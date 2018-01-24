@@ -16,7 +16,7 @@ $serial_sec=$_GET['serial_sec'];
 global $DBConnection;
 
 $dblink = NewADOConnection($DBConnection);
-if (!$dblink) die("Error Fatal: NO SE PUEDE CONECTAR A LA BASE DE DATOS");
+if (!$dblink) die("Error Fatal: NO SE PUEDE CONECTAR A LA BASE DE DATOS DEL SERVIDOR");
 
 $sqlCmd='select serial_tri,nombre_tri,abreviatura_tri from trimestre where desplegar_tri="SI" and serial_per='.$serial_per." and serial_sec=".$serial_sec." order by fecini_tri";
 $rsTrimestre=$dblink->Execute($sqlCmd);
@@ -156,9 +156,9 @@ $rsParcial=$dblink->Execute("select serial_prc,abreviatura_prc, tipo_prc, formul
         $nt=0;
         if (substr($rsMateria->fields['codigo_mat'],0,4)!='COND') {
                 if($rsMateria->fields['tipo_mat']!='TERMINAL') {   //victor2017
-//     	             $nombreeje=wordwrap($rsMateria->fields[1],70,'¬');
-       	             $nombreeje=wordwrap($rsMateria->fields[1],120,'¬');
-                     $snombreeje=explode('¬',$nombreeje);
+//     	             $nombreeje=wordwrap($rsMateria->fields[1],70,'Â¬');
+       	             $nombreeje=wordwrap($rsMateria->fields[1],120,'Â¬');
+                     $snombreeje=explode('Â¬',$nombreeje);
 
 
                         if ($posY>221) {
@@ -291,8 +291,8 @@ $rsParcial=$dblink->Execute("select serial_prc,abreviatura_prc, tipo_prc, formul
                                       //  $printOBJ->addColumn('.',3,'',8,$posY,"number","right",'Helvetica','5',true);
                                         $printOBJ->addColumn('*',3,'',57.7,$posY,"number","right",'Helvetica','9',true,false,0,237,28,36);
                                        }
-                         $nombreeje=wordwrap($rsMateria->fields[1],40,'¬');
-                         $snombreeje=explode('¬',$nombreeje);
+                         $nombreeje=wordwrap($rsMateria->fields[1],40,'Â¬');
+                         $snombreeje=explode('Â¬',$nombreeje);
                          //  var_dump($nombreeje);
                          $printOBJ->addColumn(' ',$posXFin-5,0.5,5,$posY,"line","center",'Helvetica','5',false);
                          $posY+=1;
