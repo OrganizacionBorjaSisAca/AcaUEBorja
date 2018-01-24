@@ -581,21 +581,7 @@ $vicerrector=leerConsejoDirectivo($dblink,$serial_per,$serial_sec,'VICERRECTOR')
                     $printOBJ->addColumn(' ',17,$secretario,58,$posY+26,"string","center",'Helvetica','6',true);
                     $printOBJ->addColumn('SECRETARIA',17,' ',68,$posY+29,"string","center",'Helvetica','8',true);
                     }
-/*
-          if($secretario==''){
-                    $printOBJ->addColumn('___________________________',17,'',5+$espacio0,$posY+$posYAuxPeriodo-$POSYYY1,"string","center",'Helvetica','8',true);
-                    $printOBJ->addColumn(' ',17,$secretario,5+$espacio0,$posY+$posYAuxPeriodo+4-$POSYYY1,"string","center",'Helvetica','7',true);
-                    $printOBJ->addColumn('SECRETARIA',17,' ',10+$espacio0,$posY+$posYAuxPeriodo+8-$POSYYY1,"string","center",'Helvetica','9',true);
-                    }
-*/
-
- /*         if($rector!=''){   //v firma rector
-                    $printOBJ->addColumn('___________________________',17,'',25,$posY+$posYAuxPeriodo-5,"string","center",'Helvetica','8',true);
-                    $printOBJ->addColumn(' ',17,$rector,25,$posY+$posYAuxPeriodo+4-5,"string","center",'Helvetica','7',true);
-                    $printOBJ->addColumn('RECTOR',17,'',30,$posY+$posYAuxPeriodo+8-5,"string","center",'Helvetica','9',true);
-                    }
-*/
-          
+    
 
            if($dirigente!=''){
                    $printOBJ->addColumn('________________________',17,'',105,$posY+23,"string","center",'Helvetica','8',true);
@@ -612,16 +598,6 @@ $vicerrector=leerConsejoDirectivo($dblink,$serial_per,$serial_sec,'VICERRECTOR')
            $printOBJ->addColumn('___________________________',17,'',5+$espacio*3,$posY+$posYAuxPeriodo-$POSYYY1,"string","center",'Helvetica','8',true);
            $printOBJ->addColumn('REPRESENTANTE',17,'',10+$espacio*3+4,$posY+$posYAuxPeriodo+4-$POSYYY1,"string","center",'Helvetica','9',true);
 */
-     /*
-        $printOBJ->addColumn(' ',17,$director,5,$posY+$posYAuxPeriodo,"string","center",'Helvetica','7',true);
-        $printOBJ->addColumn(' ',17,$secretario,5+$espacio,$posY+$posYAuxPeriodo,"string","center",'Helvetica','7',true);
-        $printOBJ->addColumn(' ',17,$dirigente,5+$espacio*2-5,$posY+$posYAuxPeriodo,"string","center",'Helvetica','7',true);
-
-           $printOBJ->addColumn('RECTOR',17,'',10,$posY+$posYAuxPeriodo+4,"string","center",'Helvetica','9',true);
-           $printOBJ->addColumn('DIRECTOR(A)',17,'',10,$posY+$posYAuxPeriodo+4,"string","center",'Helvetica','9',true);
-           $printOBJ->addColumn('SECRETARIA(O)',17,' ',10+$espacio,$posY+$posYAuxPeriodo+4,"string","center",'Helvetica','9',true);
-           $printOBJ->addColumn('TUTOR(A)',17,' ',10+$espacio*2,$posY+$posYAuxPeriodo+4,"string","center",'Helvetica','9',true);
- */ 
 
 
     $d=$omnisoftCiudad.", ".date("Y")."-".date("n")."-".date("d")." ".date("H:i:s");
