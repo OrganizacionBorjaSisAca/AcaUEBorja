@@ -16,7 +16,7 @@ $serial_sec=$_GET['serial_sec'];
 global $DBConnection;
 
 $dblink = NewADOConnection($DBConnection);
-if (!$dblink) die("Error Fatal: NO SE PUEDE CONECTAR A LA BASE DE DATOS DEL SERVIDOR");
+if (!$dblink) die("Error Fatal: NO SE PUEDE CONECTAR A LA BASE DE DATOS");
 
 $sqlCmd='select serial_tri,nombre_tri,abreviatura_tri from trimestre where desplegar_tri="SI" and serial_per='.$serial_per." and serial_sec=".$serial_sec." order by fecini_tri";
 $rsTrimestre=$dblink->Execute($sqlCmd);
